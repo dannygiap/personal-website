@@ -1,0 +1,38 @@
+<%- include("partials/header") %>
+
+<section class="mt5 mw7 center">
+<article class="pa3 pa5-ns">
+	<h1 class="f2"><%= blog.title %></h1>
+	<h5><%= blog.created.toDateString() %></h5>
+ 	<p class="lh-copy measure-wide paragraph"><%- blog.body %></p>
+ 	<div class="flex items-center justify-center pa4">
+	  <a href="/blog" class="f5 no-underline black bg-animate hover-bg-black hover-white inline-flex items-center pa2 ba border-box mr4">
+      <svg class="w1" data-icon="chevronLeft" viewBox="0 0 32 32" style="fill:currentcolor">
+        <title>chevronLeft icon</title>
+        <path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path>
+      </svg>
+      <span class="pl1">Back</span>
+ 	 </a>
+</article>
+</section>
+<!-- <div class="ui main text container">
+            <div class="ui huge header"><%= blog.title %></div>
+            <div class="ui top attached">
+                <div class="item">
+                    <div class="content">
+                        <span><%= blog.created.toDateString() %></span>
+                    </div>
+                    <div class="description">
+                        <p><%- blog.body %></p>
+                    </div>
+                    <div id="centeredDiv">
+                        <a href="/blogs/<%= blog._id %>/edit" class="ui orange basic big button">EDIT</a>
+                        <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                            <button class="ui red basic big button">DELETE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+<%- include("partials/footer") %>

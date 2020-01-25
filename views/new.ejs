@@ -1,0 +1,30 @@
+<%- include("partials/header") %>
+
+<main class="pa6 black-80">
+  <form class="measure center" action="/blog" method="POST">
+    <fieldset id="new-blog" class="ba b--transparent ph0 mh0">
+      <legend class="f4 fw6 ph0 mh0">New Blog</legend>
+      <div class="mt3">
+        <label class="db fw6 lh-copy f6">Title</label>
+        <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="blog[title]" placeholder="Title of the Blog">
+      </div>
+      <div class="mv3">
+        <label class="db fw6 lh-copy f6">Image</label>
+        <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="blog[image]" placeholder="URL of your image">
+      </div>
+      <div class="mv3">
+        <label class="db fw6 lh-copy f6">Text</label>
+        <textarea class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" name="blog[body]"></textarea>
+      </div>
+    </fieldset>
+    <div class="">
+      <input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Post">
+    </div>
+    <div class="lh-copy mt3">
+      <a href="/blog" class="f6 link dim black db">Cancel</a>
+    </div>
+  </form>
+</main>
+
+
+<%- include("partials/footer") %>
