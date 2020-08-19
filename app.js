@@ -17,7 +17,7 @@ mongoose
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
-      useCreateIndex: true
+      useCreateIndex: true,
     }
   )
   .then(() => {
@@ -31,7 +31,7 @@ var blogSchema = new mongoose.Schema({
   image: String,
   title: String,
   body: String,
-  created: { type: Date, default: Date.now }
+  created: { type: Date, default: Date.now },
 });
 
 var Blog = mongoose.model('Blog', blogSchema);
@@ -71,13 +71,13 @@ app.get('/blog', (req, res) => {
 });
 
 // NEW Route
-app.get('/blog/ironman', function(req, res) {
+app.get('/blog/ironman', function (req, res) {
   res.render('new');
 });
 
 // CREATE Route
-app.post('/blog', function(req, res) {
-  Blog.create(req.body.blog, function(err, newBlog) {
+app.post('/blog', function (req, res) {
+  Blog.create(req.body.blog, function (err, newBlog) {
     if (err) {
       res.redirect('new');
     } else {
@@ -134,10 +134,10 @@ app.delete('/blog/:id', (req, res) => {
   });
 });
 
-// app.listen(process.env.PORT, () => {
-//   console.log(`Listening on port ${process.env.PORT}`);
-// });
-
-app.listen(3000, () => {
-  console.log('Listening on port 3000');
+app.listen(process.env.PORT, () => {
+  console.log(`Listening on port ${process.env.PORT}`);
 });
+
+// app.listen(3000, () => {
+//   console.log('Listening on port 3000');
+// });
