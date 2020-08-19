@@ -3,20 +3,27 @@
 <section class="mt6 mb3 mw7 center avenir">
   <h2 class="baskerville f2 fw1 ph3 ph0-l black pb3">Blog</h2>
   <% blogs.forEach(function(blog) { %>
-	  <article class="bt bb b--black-10">
-	    <a class="db pv4 ph3 ph0-l no-underline black dim" href="/blog/<%= blog._id %>">
-	    	<div class="flex flex-column flex-row-ns">
-			   	<div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-		          <img src="<%= blog.image %>" class="db" alt="Photo of a dimly lit room with a computer interface terminal.">
-		        </div>
-		        <div class="w-100 w-60-ns pl3-ns">
-		          <h1 class="baskerville f3 fw1 mt0 lh-title"><%= blog.title %></h1>
-		          <p class="mv4 f6 f5-l lh-copy"><%- blog.body.substring(0,50) %>...</p>
-		          <p class="f7 lh-copy mv0"><%= blog.created.toDateString() %></p>
-		        </div>
-			 </div>
-	    </a>
-	  </article>
+  <article class="bt bb b--black-10">
+    <a
+      class="db pv4 ph3 ph0-l no-underline black dim"
+      href="/blog/<%= blog._id %>"
+    >
+      <div class="flex flex-column flex-row-ns">
+        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+          <img
+            src="<%= blog.image %>"
+            class="db"
+            alt="Photo of a dimly lit room with a computer interface terminal."
+          />
+        </div>
+        <div class="w-100 w-60-ns pl3-ns">
+          <h1 class="baskerville f3 fw1 mt0 lh-title"><%= blog.title %></h1>
+          <p class="mv4 f6 f5-l lh-copy"><%- blog.body.substring(0,50) %>...</p>
+          <p class="f7 lh-copy mv0"><%= blog.created.toDateString() %></p>
+        </div>
+      </div>
+    </a>
+  </article>
   <% }); %>
 </section>
 
