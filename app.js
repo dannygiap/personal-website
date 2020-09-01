@@ -134,13 +134,11 @@ app.delete('/blog/:id', (req, res) => {
   });
 });
 
-if (process.env.NODE_ENV !== 'developement') {
-  app.listen(3000, () => {
-    console.log(`Listening on port 3000`);
-    console.log(`in dev`);
-  });
-} else {
-  app.listen(process.env.PORT, () => {
-    console.log(`Listening on port ${process.env.PORT}`);
-  });
-}
+// app.listen(3000, () => {
+//   console.log(`Listening on port 3000`);
+//   console.log(`in dev`);
+// });
+
+app.listen(process.env.PORT, () => {
+  console.log(`Listening on port ${process.env.PORT}`);
+});
