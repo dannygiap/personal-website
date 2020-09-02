@@ -154,7 +154,7 @@ h5 {
 
 #projects {
   background-color: #292b2c;
-  padding: 2em;
+  padding: 2em 4em;
 }
 
 #projects h2 {
@@ -186,7 +186,7 @@ h5 {
   transform: scale(1.03);
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   /* .box {
     padding: 10px;
     margin: 5px;
@@ -194,7 +194,7 @@ h5 {
 
   .grid-wrapper {
     margin: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   }
 }
 
